@@ -18,12 +18,14 @@ Goal is to have an external server handling voice chat for FiveM servers instead
 
  1. Clone this repository
  2. Build the server using cargo: `cargo build --release`
+ 3. Locate your FiveM FXserver and open both certificate files server-tls.crt (private key) and server-tls.key (certificate) in notepad or any other text editor
+ 4. Create certificates directly in the ZUMBLE directory. To create both certificate I use `nano key.pem` and copy-paste the content of server-tls.crt then do the same `nano cert.pem` with server-tls.key
 
 ## How to run it
 
  1. Do this command `tmux`
  2. Locate Executable and go in the directory with `cd` In my case it's zumble\ZUMBLE
- 3. Use this command `./target/release/zumble --http-password <HTTP_PASSWORD>`
+ 3. Use this command `./target/release/zumble --https --http-password <HTTP_PASSWORD>`
  4. Detach from the session by pressing `Ctrl-b` followed by `d`.
  5. If you go back to ssh again and want to reattach to the tmux session `tmux attach`
 
