@@ -19,6 +19,15 @@ Goal is to have an external server handling voice chat for FiveM servers instead
  1. Clone this repository
  2. Build the server using cargo: `cargo build --release`
 
+## How to run it
+
+ 1. Do this command `tmux`
+ 2. Locate Executable and go in the directory with `cd` In my case it's zumble\ZUMBLE
+ 3. Use this command `./target/release/zumble --http-password <HTTP_PASSWORD>`
+ 4. Detach from the session by pressing `Ctrl-b` followed by `d`.
+ 5. If you go back to ssh again and want to reattach to the tmux session `tmux attach`
+
+
 Future versions will include pre-built binaries in release section of GitHub.
 
 ## Usage
